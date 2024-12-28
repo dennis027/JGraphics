@@ -1,0 +1,112 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e7e78e;
+    position: fixed; /* Fix the navbar at the top */
+    width: 100%;     /* Full width */
+    z-index: 1000;   /* Ensure it stays on top of other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  .menu-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .menu-links {
+      display: none;
+    }
+  }
+  
+  @media screen and (min-width: 600px) {
+    .menu-icon {
+      display: none;
+    }
+  }
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .mobile-menu-content {
+    background: white;
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+
+    .close-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      color: white;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin: 1rem 0;
+
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.style-logo{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Extra Small Devices (Phones) */
+@media (max-width: 576px) {
+  /* Styles for phones */
+}
+
+/* Small Devices (Large Phones) */
+@media (min-width: 577px) and (max-width: 767px) {
+  /* Styles for large phones */
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for tablets */
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Styles for desktops */
+}
+
+/* Extra Large Devices (Large Desktops) */
+@media (min-width: 1200px) {
+  /* Styles for large screens */
+}

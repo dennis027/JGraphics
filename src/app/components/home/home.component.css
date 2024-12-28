@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Playwrite+ES+Deco+Guides&family=Roboto+Condensed:ital,wght@1,100..900&display=swap');
+*, ::after, ::before {
+    max-width: 100%;
+}
+.cover-photo{
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Full screen height */
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
+  .cover-photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: 1; /* Position the overlay behind the content */
+  }
+  
+  .cover-photo p {
+    position: relative;
+    z-index: 2; /* Position content above the overlay */
+  }
+  
+
+.welcome-content{
+    text-align: center;
+}
+
+.center-motto {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text if it spans multiple lines */
+    
+}
+
+.textq-color{
+    color: #3b5323;
+
+}
+
+.header1{
+    font-family: "Indie Flower", serif;
+    font-weight: 1000;
+    font-style: normal;
+    font-size: 900;
+    display: block;
+}
+
+.headercontext{
+    display: block !important;
+}
+
+.custom-hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, 
+      #000 10%, /* Thin start */
+      #000 40%, /* Thicker middle */
+      transparent 100%, /* Thin middle */
+      #000 60%, /* Thicker middle */
+      #000 90%, /* Thinner at the end */
+      transparent 100%); /* Transparent end */
+    margin: 20px 0;
+  }
+
+  .services{
+    background-color: #f3f5fa;
+    width: 100%;
+  }

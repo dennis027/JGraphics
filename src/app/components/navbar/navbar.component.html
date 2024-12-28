@@ -1,0 +1,38 @@
+<div class="navbar">
+  <br>
+  <mat-toolbar color="primary" >
+    
+      <!-- Logo -->
+      <button mat-button class="logo"> <img class="style-logo" src="../../../assets/images/logo.png" alt="" srcset=""> Jaime One Graphics</button>
+    
+      <!-- Desktop Links -->
+      <span class="spacer"></span> 
+      <div class="menu-links" fxHide fxShow.gt-sm>
+        <button mat-button routerLink="/home">Home</button>
+        <button mat-button routerLink="/about">About</button>
+        <button mat-button routerLink="/contact">Contact</button>
+      </div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="menu-icon" mat-icon-button aria-label="Menu" (click)="toggleMenu()" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon> 
+    </button> 
+    <br>
+  </mat-toolbar>
+  
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" *ngIf="isMenuOpen">
+    <div class="mobile-menu-content">
+      <button mat-icon-button class="close-button" aria-label="Close" (click)="toggleMenu()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <ul>
+        <li><a routerLink="/home" (click)="toggleMenu()">Home</a></li>
+        <li><a routerLink="/about" (click)="toggleMenu()">About</a></li>
+        <li><a routerLink="/contact" (click)="toggleMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <br> 
+</div>
