@@ -1,15 +1,36 @@
-import { Component, OnInit, Renderer2, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, Renderer2, Inject, PLATFORM_ID,inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { NavbarComponent } from "../navbar/navbar.component";
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {ClipboardModule} from '@angular/cdk/clipboard';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [NavbarComponent,MatCardModule,MatListModule,MatIconModule,ClipboardModule,MatButtonModule,NgbCarouselModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  email="gitaunjoroge474@gmail.com"
+  phoneNumber="+254796688616"
+
+
+  private _snackBar = inject(MatSnackBar);
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 3000, // Disappear after 3 seconds 
+    });
+  }
+  
 
   constructor(
     private renderer: Renderer2,
