@@ -8,12 +8,12 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent,MatCardModule,MatListModule,MatIconModule,ClipboardModule,MatButtonModule,NgbCarouselModule],
+  imports: [NavbarComponent,MatCardModule,MatListModule,MatIconModule,ClipboardModule,MatButtonModule,NgbCarouselModule,MatTooltipModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
